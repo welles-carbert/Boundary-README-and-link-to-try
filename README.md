@@ -132,6 +132,15 @@ The demo API key is scoped to the demo project.
 Using it with any other project_id will be rejected. 
 
 ⸻
+Demo Key Limits
+
+The public demo API key is rate-limited to prevent abuse.
+
+Limits (demo project only):
+	•	30 events per minute
+	•	HTTP 429 returned when exceeded
+
+This limit does not apply to real project keys.
 
 ## Contact / Access
 

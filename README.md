@@ -56,22 +56,10 @@ Once you have a key, you can immediately send events.
 
 2 Send an event
 
-curl https://boundary-9iyg.onrender.com/v1/events \
+curl -sS -X POST "https://boundary-9iyg.onrender.com/v1/events" \
   -H "X-API-Key: bf7c0de3aa25416bb39e0f5f310ab80e" \
   -H "Content-Type: application/json" \
-  -d '{
-    "project_id": "demo",
-    "run_id": "example-run-1",
-    "type": "value",
-    "amount": 1.0,
-    "meta": {
-      "primitive": {
-        "kind": "HTTP_REQUEST",
-        "method": "GET",
-        "url": "https://example.com"
-      }
-    }
-  }'
+  -d '{"project_id":"demo","run_id":"example-run-1","type":"value","amount":1.0,"meta":{"primitive":{"kind":"HTTP_REQUEST","method":"GET","url":"https://example.com"}}}'
 
 Successful response:
   {

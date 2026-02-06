@@ -42,6 +42,9 @@ This makes agent behavior:
 	•	Cheap to reason about
 
 ⸻
+# Drop-in Boundary call (agent-safe, 1 request)
+
+curl -sS -X POST "https://boundary-9iyg.onrender.com/v1/events" \-H "X-API-Key: bf7c0de3aa25416bb39e0f5f310ab80e" \-H "Content-Type: application/json" \-d '{ "project_id": "demo", "run_id": "agent-run-1", "type": "value", "amount": 1.0, "meta": { "primitive": { "kind": "HTTP_REQUEST", "method": "GET", "url": "https://example.com" } } }'
 
 Quick Start (5 minutes)
 
